@@ -60,6 +60,10 @@ export const translations = {
       expSubtitle: "My professional journey is defined by the impact I create and the systems I leave behind.",
       orgTitle: "Organizations & Leadership",
       orgSubtitle: "Where I've contributed my vision and energy beyond code.",
+      orgBack: "Back to Organizations",
+      orgGallery: "Moments & Impact",
+      orgRole: "Role",
+      orgImpact: "Impact & Contribution",
       stats: [
         { label: "Systems Built", value: 12 },
         { label: "Projects Shipped", value: 24 },
@@ -166,6 +170,10 @@ export const translations = {
       expSubtitle: "Perjalanan profesional saya ditentukan oleh dampak yang saya ciptakan dan sistem yang saya tinggalkan.",
       orgTitle: "Organisasi & Kepemimpinan",
       orgSubtitle: "Di mana saya menyumbangkan visi dan energi saya di luar kode.",
+      orgBack: "Kembali ke Organisasi",
+      orgGallery: "Momen & Dampak",
+      orgRole: "Peran",
+      orgImpact: "Dampak & Kontribusi",
       stats: [
         { label: "Sistem Dibangun", value: 12 },
         { label: "Proyek Dikirim", value: 24 },

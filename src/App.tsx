@@ -15,6 +15,7 @@ import { Contact } from './pages/Contact';
 
 import { ProjectDetail } from './pages/ProjectDetail';
 import { BlogDetail } from './pages/BlogDetail';
+import { OrgDetail } from './pages/OrgDetail';
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -27,6 +28,7 @@ const AnimatedRoutes = () => {
           <Route path="/about" element={<PageTransition><About /></PageTransition>} />
           <Route path="/work" element={<PageTransition><Work /></PageTransition>} />
           <Route path="/projects/:id" element={<PageTransition><ProjectDetail /></PageTransition>} />
+          <Route path="/organizations/:id" element={<PageTransition><OrgDetail /></PageTransition>} />
           <Route path="/blog" element={<PageTransition><Thoughts /></PageTransition>} />
           <Route path="/blog/:id" element={<PageTransition><BlogDetail /></PageTransition>} />
           <Route path="/lab" element={<PageTransition><Lab /></PageTransition>} />

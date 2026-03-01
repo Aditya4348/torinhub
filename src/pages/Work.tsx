@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { ExternalLink, Github, Code2, Layers, Lightbulb, Zap, Code, Users, Building2, Trophy } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import { projectsData } from '../data/Content';
+import { projectsData, organizationsData } from '../data/Content';
 
 const experiences = [
   {
@@ -23,22 +23,10 @@ const experiences = [
   }
 ];
 
-const organizations = [
-  {
-    name: "Global Tech Community",
-    role: "Regional Lead",
-    period: "2023 - Present",
-    desc: "Managing developer relations and organizing monthly meetups for over 1000 members.",
-    icon: <Users className="text-pink-500" />
-  },
-  {
-    name: "Open Source Collective",
-    role: "Core Contributor",
-    period: "2022 - 2023",
-    desc: "Contributing to various open-source projects focused on system performance and developer tools.",
-    icon: <Building2 className="text-yellow-500" />
-  }
-];
+const orgIcons: Record<string, any> = {
+  "global-tech": <Users className="text-pink-500" />,
+  "open-source": <Building2 className="text-yellow-500" />
+};
 
 export const Work = () => {
   const { t } = useLanguage();
@@ -147,17 +135,24 @@ export const Work = () => {
             </p>
 
             <div className="space-y-6">
-              {organizations.map((org, i) => (
-                <div key={i} className="glass p-8 rounded-3xl hover:bg-white/10 transition-colors">
+              {organizationsData.map((org, i) => (
+                <div 
+                  key={org.id} 
+                  onClick={() => navigate(`/organizations/${org.id}`)}
+                  className="glass p-8 rounded-3xl hover:bg-white/10 transition-colors cursor-pointer group"
+                >
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="p-3 bg-white/5 rounded-2xl">{org.icon}</div>
+                    <div className="p-3 bg-white/5 rounded-2xl">{orgIcons[org.id]}</div>
                     <div>
-                      <h3 className="text-xl font-bold">{org.name}</h3>
+                      <h3 className="text-xl font-bold group-hover:text-purple-accent transition-colors">{org.name}</h3>
                       <p className="text-pink-500 text-sm">{org.role}</p>
                     </div>
                   </div>
                   <p className="text-slate-400 mb-4">{org.desc}</p>
-                  <p className="text-xs font-mono text-slate-500">{org.period}</p>
+                  <div className="flex items-center justify-between">
+                    <p className="text-xs font-mono text-slate-500">{org.period}</p>
+                    <span className="text-purple-accent font-bold text-xs group-hover:translate-x-1 transition-transform">Details →</span>
+                  </div>
                 </div>
               ))}
             </div>

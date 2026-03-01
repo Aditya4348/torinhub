@@ -84,3 +84,35 @@ export const blogPostsData = [
     `
   }
 ];
+
+export const organizationsData = [
+  {
+    id: "global-tech",
+    name: "Global Tech Community",
+    role: "Regional Lead",
+    period: "2023 - Present",
+    desc: "Managing developer relations and organizing monthly meetups for over 1000 members. Focused on fostering a culture of knowledge sharing and technical excellence.",
+    fullDesc: "As the Regional Lead for the Global Tech Community, I am responsible for overseeing all activities within the region. This includes coordinating with local chapters, securing sponsorships for events, and ensuring that our members have access to the resources they need to grow as developers. I have successfully organized several large-scale hackathons and conferences, bringing together hundreds of developers from diverse backgrounds.",
+    impact: "Grew the local community by 150% and established partnerships with 10+ major tech firms.",
+    gallery: [
+      "https://picsum.photos/seed/org1-1/1200/800",
+      "https://picsum.photos/seed/org1-2/1200/800",
+      "https://picsum.photos/seed/org1-3/1200/800",
+      "https://picsum.photos/seed/org1-4/1200/800"
+    ]
+  },
+  {
+    id: "open-source",
+    name: "Open Source Collective",
+    role: "Core Contributor",
+    period: "2022 - 2023",
+    desc: "Contributing to various open-source projects focused on system performance and developer tools. Advocating for open-source sustainability and best practices.",
+    fullDesc: "My role at the Open Source Collective involved deep technical contributions to several high-profile projects. I focused on optimizing core libraries for better performance and creating comprehensive documentation to lower the barrier to entry for new contributors. I also represented the collective at various international conferences, sharing our mission and encouraging more developers to get involved in open source.",
+    impact: "Contributed 500+ commits across 5 major projects, reducing average build times by 20%.",
+    gallery: [
+      "https://picsum.photos/seed/org2-1/1200/800",
+      "https://picsum.photos/seed/org2-2/1200/800",
+      "https://picsum.photos/seed/org2-3/1200/800"
+    ]
+  }
+];
